@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: rgb(24, 24, 24);
+  background: linear-gradient(
+    163deg,
+    rgba(24, 24, 24, 1) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(11, 9, 9, 1) 32%,
+    rgba(11, 11, 11, 1) 52%,
+    rgba(8, 6, 6, 1) 84%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  color: white;
+}
+
+@keyframes animate-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-from-top {
+  animation: animate-from-top 1150ms ease-in-out;
+}
