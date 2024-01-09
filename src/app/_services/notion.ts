@@ -31,15 +31,15 @@ export async function getPosts() {
 
 }
 
-export async function getPost(Slug: string) {
+export async function getPost(Formula: string) {
   const response = await notion.databases.query({
     database_id: DATA_BASE_ID,
     filter: {
       or: [
         {
-          property: "Slug",
+          property: "Formula",
           rich_text: {
-            equals: Slug,
+            equals: Formula,
           },
         },
       ],
